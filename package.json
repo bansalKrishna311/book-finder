@@ -1,13 +1,22 @@
 {
   "name": "book-finder",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
   "type": "module",
+  "description": "Alex's Book Finder - A beautiful book discovery application built for Aganitha Web Developer assignment",
+  "author": "Krishna Bansal <https://www.linkedin.com/in/bansalkrishna311/>",
+  "keywords": ["react", "vite", "books", "search", "tailwind", "open-library"],
+  "homepage": "https://book-finder-your-deployment.vercel.app",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bansalKrishna311/book-finder.git"
+  },
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "vercel-build": "vite build"
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.1.13",

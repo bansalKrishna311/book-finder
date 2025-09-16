@@ -71,6 +71,38 @@ npm run build
 npm run preview
 ```
 
+### 🌐 Deploy to Vercel
+
+This project is optimized for Vercel deployment:
+
+#### One-Click Deploy
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/bansalKrishna311/book-finder)
+
+#### Manual Deployment
+```bash
+# Install Vercel CLI
+npm i -g vercel
+
+# Login to Vercel
+vercel login
+
+# Deploy to Vercel
+vercel
+
+# For production deployment
+vercel --prod
+```
+
+#### Vercel Configuration
+The project includes:
+- ✅ `vercel.json` - Deployment configuration
+- ✅ `.vercelignore` - Files to exclude from deployment
+- ✅ Optimized Vite build settings
+- ✅ SPA routing configuration
+- ✅ Asset optimization
+
+**Live Demo**: [View on Vercel](https://book-finder-your-deployment.vercel.app) *(Update with your actual deployment URL)*
+
 ---
 
 ## 🛠️ Tech Stack
