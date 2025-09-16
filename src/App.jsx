@@ -300,10 +300,19 @@ function App() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
           <div className="text-center">
             <p className="text-charcoal-700 dark:text-charcoal-200">
-              Made with 💜 by krishna bansal for book lovers everywhere
+              Made with 💜 by{' '}
+              <a 
+                href="https://www.linkedin.com/in/bansalkrishna311/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-primary-600 dark:text-primary-400 hover:text-primary-700 dark:hover:text-primary-300 transition-colors font-medium"
+              >
+                Krishna Bansal
+              </a>{' '}
+              for book lovers everywhere
             </p>
             <p className="text-xs text-charcoal-600 dark:text-charcoal-300 mt-2">
-              Powered by Open Library API
+              Powered by Open Library API | Candidate ID: Naukri0925
             </p>
           </div>
         </div>
