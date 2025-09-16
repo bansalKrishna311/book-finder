@@ -1,1 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Nunito:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap');
 @import "tailwindcss";
+
+/* Base styles for the app */
+:root {
+  --gradient-primary: linear-gradient(135deg, #A5C9FF 0%, #C8B6FF 100%);
+  --gradient-accent: linear-gradient(135deg, #FFB5A7 0%, #A5C9FF 100%);
+  --gradient-mood: linear-gradient(45deg, #C8B6FF 0%, #FFB5A7 50%, #A5C9FF 100%);
+}
+
+body {
+  font-family: 'Nunito', 'Inter', sans-serif;
+  background: #FFFDF7;
+  transition: background-color 0.3s ease;
+}
+
+.dark body {
+  background: #1E1E2E;
+}
+
+/* Smooth scrolling for better UX */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #A5C9FF;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #7BB3FF;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  background: #C8B6FF;
+}
+
+.dark ::-webkit-scrollbar-thumb:hover {
+  background: #A78BFA;
+}
+
+/* Mood background tint */
+.mood-active::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--mood-tint);
+  pointer-events: none;
+  z-index: 1;
+  transition: opacity 0.5s ease;
+}
+
+.mood-active > * {
+  position: relative;
+  z-index: 2;
+}
+
+/* Utility classes for gradients */
+.gradient-primary {
+  background: var(--gradient-primary);
+}
+
+.gradient-accent {
+  background: var(--gradient-accent);
+}
+
+.gradient-mood {
+  background: var(--gradient-mood);
+}
+
+/* Skeleton loader animation */
+@keyframes skeleton-pulse {
+  0% {
+    background-position: -200px 0;
+  }
+  100% {
+    background-position: calc(200px + 100%) 0;
+  }
+}
+
+.skeleton {
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200px 100%;
+  animation: skeleton-pulse 1.5s infinite;
+}
+
+.dark .skeleton {
+  background: linear-gradient(90deg, #2d2d3a 25%, #3d3d4a 50%, #2d2d3a 75%);
+  background-size: 200px 100%;
+}
