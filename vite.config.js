@@ -5,6 +5,7 @@ import tailwindcss from '@tailwindcss/vite'
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react(), tailwindcss()],
+  base: '/',
   build: {
     outDir: 'dist',
     assetsDir: 'assets',
@@ -14,9 +15,13 @@ export default defineConfig({
         manualChunks: {
           vendor: ['react', 'react-dom'],
           utils: ['lucide-react']
-        }
+        },
+        assetFileNames: 'assets/[name].[hash].[ext]',
+        chunkFileNames: 'assets/[name].[hash].js',
+        entryFileNames: 'assets/[name].[hash].js'
       }
-    }
+    },
+    assetsInlineLimit: 0
   },
   server: {
     port: 3000,
